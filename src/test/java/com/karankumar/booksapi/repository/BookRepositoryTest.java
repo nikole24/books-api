@@ -40,7 +40,6 @@ class BookRepositoryTest {
     private static final String ISBN = "978-3-16-148410-0";
     private static final String TITLE = "Harry Potter";
 
-
     private final BookRepository bookRepository;
     private final AuthorRepository authorRepository;
     
@@ -107,7 +106,8 @@ class BookRepositoryTest {
         book.setIsbn13(ISBN);
         return book;
     }
-  @Test
+
+    @Test
     @DisplayName("find book by title")
     void findBookByTitle() {
         // given
@@ -145,9 +145,8 @@ class BookRepositoryTest {
         );
         return book;
     }
+
     private void saveAllAuthors(Author... authors) {
         Arrays.stream(authors).forEach(authorRepository::save);
     }
-    
-    
 }
